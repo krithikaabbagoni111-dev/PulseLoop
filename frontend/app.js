@@ -13,7 +13,7 @@
 const CONFIG = {
     API_BASE:
         window.PULSELOOP_API_BASE ||
-        "http://127.0.0.1:8000",
+        "https://pulseloop-backend.onrender.com",
 
     DEMO_MODE: false
 };
