@@ -1,0 +1,1612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="PulseLoop - AI-powered customer intelligence and Hindsight memory"
+    >
+
+    <title>PulseLoop — AI Product Intelligence</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+</head>
+
+<body>
+
+<!-- =====================================================
+     BACKGROUND EFFECTS
+===================================================== -->
+
+<div class="background-glow glow-one"></div>
+<div class="background-glow glow-two"></div>
+
+<!-- =====================================================
+     MOBILE OVERLAY
+===================================================== -->
+
+<div
+    id="mobileOverlay"
+    class="mobile-overlay"
+></div>
+
+<!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+<aside
+    id="sidebar"
+    class="sidebar"
+>
+
+    <div class="sidebar-top">
+
+        <div class="brand">
+
+            <div class="brand-mark">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div>
+                <div class="brand-name">
+                    PulseLoop
+                </div>
+
+                <div class="brand-subtitle">
+                    AI PRODUCT INTELLIGENCE
+                </div>
+            </div>
+
+        </div>
+
+        <button
+            id="closeSidebar"
+            class="mobile-close"
+        >
+            ×
+        </button>
+
+    </div>
+
+    <div class="workspace-card">
+
+        <div class="workspace-icon">
+            ✦
+        </div>
+
+        <div>
+            <strong>
+                Product Workspace
+            </strong>
+
+            <span>
+                Hindsight connected
+            </span>
+        </div>
+
+        <div class="online-dot"></div>
+
+    </div>
+
+    <nav class="sidebar-nav">
+
+        <div class="nav-label">
+            WORKSPACE
+        </div>
+
+        <button
+            class="nav-item active"
+            data-page="overview"
+        >
+            <span class="nav-icon">⌂</span>
+            <span>Overview</span>
+        </button>
+
+        <button
+            class="nav-item"
+            data-page="feedback"
+        >
+            <span class="nav-icon">◈</span>
+            <span>Feedback</span>
+            <span
+                id="feedbackNavCount"
+                class="nav-count"
+            >
+                8
+            </span>
+        </button>
+
+        <button
+            class="nav-item"
+            data-page="memory"
+        >
+            <span class="nav-icon">✦</span>
+            <span>Hindsight Memory</span>
+        </button>
+
+        <button
+            class="nav-item"
+            data-page="insights"
+        >
+            <span class="nav-icon">◉</span>
+            <span>AI Insights</span>
+        </button>
+
+        <button
+            class="nav-item"
+            data-page="chat"
+        >
+            <span class="nav-icon">✧</span>
+            <span>AI Assistant</span>
+            <span class="ai-badge">
+                AI
+            </span>
+        </button>
+
+        <div class="nav-label nav-label-space">
+            SYSTEM
+        </div>
+
+        <button
+            class="nav-item"
+            data-page="activity"
+        >
+            <span class="nav-icon">◌</span>
+            <span>Activity</span>
+        </button>
+
+        <button
+            class="nav-item"
+            data-page="settings"
+        >
+            <span class="nav-icon">⚙</span>
+            <span>Settings</span>
+        </button>
+
+    </nav>
+
+    <div class="sidebar-bottom">
+
+        <div class="memory-status">
+
+            <div class="memory-status-top">
+
+                <span>
+                    Hindsight Memory
+                </span>
+
+                <span class="status-live">
+                    LIVE
+                </span>
+
+            </div>
+
+            <div class="memory-progress">
+
+                <div class="memory-progress-fill"></div>
+
+            </div>
+
+            <div class="memory-status-bottom">
+
+                <span>
+                    Connected
+                </span>
+
+                <span>
+                    ●
+                </span>
+
+            </div>
+
+        </div>
+
+        <div class="user-card">
+
+            <div class="user-avatar">
+                K
+            </div>
+
+            <div class="user-info">
+
+                <strong>
+                    Product Team
+                </strong>
+
+                <span>
+                    Workspace Admin
+                </span>
+
+            </div>
+
+            <span class="user-menu">
+                ⋮
+            </span>
+
+        </div>
+
+    </div>
+
+</aside>
+
+<!-- =====================================================
+     MAIN APP
+===================================================== -->
+
+<main class="main">
+
+    <!-- TOPBAR -->
+
+    <header class="topbar">
+
+        <div class="topbar-left">
+
+            <button
+                id="openSidebar"
+                class="mobile-menu"
+            >
+                ☰
+            </button>
+
+            <div class="breadcrumb">
+                <span>
+                    PulseLoop
+                </span>
+
+                <span class="breadcrumb-arrow">
+                    /
+                </span>
+
+                <strong id="breadcrumbCurrent">
+                    Overview
+                </strong>
+            </div>
+
+        </div>
+
+        <div class="topbar-actions">
+
+            <button
+                id="searchButton"
+                class="topbar-button"
+                title="Search"
+            >
+                ⌕
+            </button>
+
+            <button
+                id="notificationButton"
+                class="topbar-button notification-button"
+                title="Notifications"
+            >
+                ♢
+                <span class="notification-dot"></span>
+            </button>
+
+            <button
+                id="analyzeButton"
+                class="primary-button small-button"
+            >
+                <span>+</span>
+                Add feedback
+            </button>
+
+        </div>
+
+    </header>
+
+    <!-- =================================================
+         PAGES
+    ================================================= -->
+
+    <div class="page-container">
+
+        <!-- =================================================
+             OVERVIEW
+        ================================================= -->
+
+        <section
+            id="page-overview"
+            class="page active-page"
+        >
+
+            <div class="hero">
+
+                <div class="hero-content">
+
+                    <div class="eyebrow">
+                        <span class="pulse-dot"></span>
+                        AI PRODUCT INTELLIGENCE
+                    </div>
+
+                    <h1>
+                        Turn customer signals
+                        <span>into product decisions.</span>
+                    </h1>
+
+                    <p>
+                        PulseLoop combines customer feedback,
+                        Hindsight memory and AI reasoning to
+                        help your product team understand what
+                        changed, what matters and what to do next.
+                    </p>
+
+                    <div class="hero-actions">
+
+                        <button
+                            id="insightButton"
+                            class="primary-button"
+                        >
+                            <span>✦</span>
+                            Generate AI insight
+                        </button>
+
+                        <button
+                            class="secondary-button"
+                            data-page="memory"
+                        >
+                            Explore memory
+                            <span>→</span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="hero-orb">
+
+                    <div class="orb-ring ring-one"></div>
+                    <div class="orb-ring ring-two"></div>
+                    <div class="orb-ring ring-three"></div>
+
+                    <div class="orb-core">
+                        ✦
+                    </div>
+
+                    <div class="orb-label">
+                        AI
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- STATS -->
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+
+                    <div class="stat-icon purple">
+                        ◈
+                    </div>
+
+                    <div class="stat-content">
+
+                        <span>
+                            Customer signals
+                        </span>
+
+                        <strong id="totalFeedback">
+                            8
+                        </strong>
+
+                        <small>
+                            captured
+                        </small>
+
+                    </div>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <div class="stat-icon blue">
+                        ✦
+                    </div>
+
+                    <div class="stat-content">
+
+                        <span>
+                            Hindsight memories
+                        </span>
+
+                        <strong id="overviewMemoryCount">
+                            …
+                        </strong>
+
+                        <small>
+                            historical context
+                        </small>
+
+                    </div>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <div class="stat-icon green">
+                        ↗
+                    </div>
+
+                    <div class="stat-content">
+
+                        <span>
+                            Positive signals
+                        </span>
+
+                        <strong id="positiveCount">
+                            3
+                        </strong>
+
+                        <small>
+                            customer sentiment
+                        </small>
+
+                    </div>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <div class="stat-icon orange">
+                        !
+                    </div>
+
+                    <div class="stat-content">
+
+                        <span>
+                            High priority
+                        </span>
+
+                        <strong id="highPriorityCount">
+                            3
+                        </strong>
+
+                        <small>
+                            need attention
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- OVERVIEW GRID -->
+
+            <div class="dashboard-grid">
+
+                <div class="panel insight-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+                            <div class="panel-eyebrow">
+                                AI RECOMMENDATION
+                            </div>
+
+                            <h2>
+                                What should we focus on?
+                            </h2>
+                        </div>
+
+                        <button
+                            id="refreshInsights"
+                            class="icon-button"
+                        >
+                            ↻
+                        </button>
+
+                    </div>
+
+                    <div class="insight-main">
+
+                        <div class="insight-icon">
+                            ✦
+                        </div>
+
+                        <div>
+
+                            <div
+                                id="insightMainText"
+                                class="insight-text"
+                            >
+                                Generate an AI insight to analyze
+                                your latest customer signals and
+                                historical product memory.
+                            </div>
+
+                            <div class="confidence">
+
+                                <div class="confidence-label">
+
+                                    <span>
+                                        AI confidence
+                                    </span>
+
+                                    <strong id="insightConfidence">
+                                        LIVE
+                                    </strong>
+
+                                </div>
+
+                                <div class="confidence-track">
+                                    <div
+                                        id="confidenceBar"
+                                        class="confidence-fill"
+                                        style="width:75%"
+                                    ></div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="panel quick-panel">
+
+                    <div class="panel-eyebrow">
+                        QUICK ACTIONS
+                    </div>
+
+                    <h2>
+                        What do you want to know?
+                    </h2>
+
+                    <button
+                        class="quick-action"
+                        data-page="chat"
+                    >
+                        <span>✦</span>
+                        <div>
+                            <strong>
+                                Ask PulseLoop AI
+                            </strong>
+                            <small>
+                                Ask anything about customer history
+                            </small>
+                        </div>
+                        <span>→</span>
+                    </button>
+
+                    <button
+                        class="quick-action"
+                        data-page="memory"
+                    >
+                        <span>◎</span>
+                        <div>
+                            <strong>
+                                Recall history
+                            </strong>
+                            <small>
+                                Search Hindsight memory
+                            </small>
+                        </div>
+                        <span>→</span>
+                    </button>
+
+                    <button
+                        class="quick-action"
+                        data-page="feedback"
+                    >
+                        <span>+</span>
+                        <div>
+                            <strong>
+                                Review feedback
+                            </strong>
+                            <small>
+                                Explore customer signals
+                            </small>
+                        </div>
+                        <span>→</span>
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- RECENT FEEDBACK -->
+
+            <div class="section-header">
+
+                <div>
+                    <div class="panel-eyebrow">
+                        LATEST SIGNALS
+                    </div>
+
+                    <h2>
+                        Recent customer feedback
+                    </h2>
+                </div>
+
+                <button
+                    class="text-button"
+                    data-page="feedback"
+                >
+                    View all →
+                </button>
+
+            </div>
+
+            <div
+                id="overviewFeedbackList"
+                class="mini-feedback-grid"
+            ></div>
+
+        </section>
+
+        <!-- =================================================
+             FEEDBACK
+        ================================================= -->
+
+        <section
+            id="page-feedback"
+            class="page"
+        >
+
+            <div class="page-heading">
+
+                <div>
+                    <div class="eyebrow">
+                        CUSTOMER SIGNALS
+                    </div>
+
+                    <h1>
+                        Feedback
+                    </h1>
+
+                    <p>
+                        Understand what customers are saying
+                        across every signal.
+                    </p>
+                </div>
+
+                <button
+                    id="addFeedbackButton"
+                    class="primary-button"
+                >
+                    + Add feedback
+                </button>
+
+            </div>
+
+            <div class="feedback-toolbar">
+
+                <div class="search-box">
+
+                    <span>⌕</span>
+
+                    <input
+                        id="feedbackSearch"
+                        type="text"
+                        placeholder="Search customer feedback..."
+                    >
+
+                </div>
+
+                <div class="filter-group">
+
+                    <button
+                        class="filter-button active"
+                    >
+                        All
+                    </button>
+
+                    <button
+                        class="filter-button"
+                    >
+                        Negative
+                    </button>
+
+                    <button
+                        class="filter-button"
+                    >
+                        Positive
+                    </button>
+
+                    <button
+                        class="filter-button"
+                    >
+                        High priority
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div
+                id="feedbackList"
+                class="feedback-list"
+            ></div>
+
+        </section>
+
+        <!-- =================================================
+             HINDSIGHT MEMORY
+        ================================================= -->
+
+        <section
+            id="page-memory"
+            class="page"
+        >
+
+            <div class="page-heading memory-heading">
+
+                <div>
+
+                    <div class="eyebrow">
+                        HINDSIGHT MEMORY
+                    </div>
+
+                    <h1>
+                        Remember everything.
+                        <span>Reason over history.</span>
+                    </h1>
+
+                    <p>
+                        Ask questions about historical customer
+                        signals and let PulseLoop AI retrieve
+                        relevant context from Hindsight.
+                    </p>
+
+                </div>
+
+                <div class="memory-live">
+
+                    <span class="pulse-dot"></span>
+
+                    Hindsight connected
+
+                </div>
+
+            </div>
+
+            <!-- MEMORY STATS -->
+
+            <div class="memory-stats">
+
+                <div class="memory-stat-card">
+
+                    <span>
+                        Total memories
+                    </span>
+
+                    <strong id="hindsightMemoryCount">
+                        …
+                    </strong>
+
+                    <small>
+                        live from Hindsight
+                    </small>
+
+                </div>
+
+                <div class="memory-stat-card">
+
+                    <span>
+                        Feedback stored
+                    </span>
+
+                    <strong id="feedbackMemoryCount">
+                        8
+                    </strong>
+
+                    <small>
+                        customer signals
+                    </small>
+
+                </div>
+
+                <div class="memory-stat-card">
+
+                    <span>
+                        AI status
+                    </span>
+
+                    <strong class="status-text">
+                        READY
+                    </strong>
+
+                    <small>
+                        reasoning available
+                    </small>
+
+                </div>
+
+            </div>
+
+            <!-- RECALL -->
+
+            <div class="recall-layout">
+
+                <div class="panel recall-panel">
+
+                    <div class="recall-header">
+
+                        <div class="recall-orb">
+                            ✦
+                        </div>
+
+                        <div>
+
+                            <div class="panel-eyebrow">
+                                AI RECALL
+                            </div>
+
+                            <h2>
+                                Ask your product memory
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+                    <p class="recall-description">
+                        Ask a natural-language question.
+                        PulseLoop will search Hindsight and
+                        use AI to explain what your historical
+                        customer data means.
+                    </p>
+
+                    <div class="recall-input-wrapper">
+
+                        <textarea
+                            id="memoryQuery"
+                            rows="4"
+                            placeholder="e.g. What problems did customers have with checkout?"
+                        ></textarea>
+
+                        <button
+                            id="recallButton"
+                            class="primary-button recall-button"
+                        >
+                            <span>✦</span>
+                            Ask memory
+                        </button>
+
+                    </div>
+
+                    <div class="recall-suggestions">
+
+                        <button
+                            class="memory-suggestion"
+                            data-query="What are customers complaining about most?"
+                        >
+                            Most common complaints
+                        </button>
+
+                        <button
+                            class="memory-suggestion"
+                            data-query="What checkout problems have appeared over time?"
+                        >
+                            Checkout history
+                        </button>
+
+                        <button
+                            class="memory-suggestion"
+                            data-query="What problems remain unresolved?"
+                        >
+                            Unresolved problems
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div
+                    id="recallResult"
+                    class="panel recall-result"
+                >
+
+                    <div class="recall-placeholder">
+
+                        <div class="placeholder-orb">
+                            ◎
+                        </div>
+
+                        <h3>
+                            Your memory is waiting.
+                        </h3>
+
+                        <p>
+                            Ask a question to retrieve
+                            historical context from Hindsight.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =================================================
+             AI INSIGHTS
+        ================================================= -->
+
+        <section
+            id="page-insights"
+            class="page"
+        >
+
+            <div class="page-heading">
+
+                <div>
+
+                    <div class="eyebrow">
+                        AI PRODUCT INTELLIGENCE
+                    </div>
+
+                    <h1>
+                        Insights
+                    </h1>
+
+                    <p>
+                        Convert customer history into
+                        actionable product decisions.
+                    </p>
+
+                </div>
+
+                <button
+                    class="primary-button"
+                    id="insightPageButton"
+                >
+                    ✦ Generate insight
+                </button>
+
+            </div>
+
+            <div class="insights-hero panel">
+
+                <div class="insights-hero-icon">
+                    ✦
+                </div>
+
+                <div>
+
+                    <div class="panel-eyebrow">
+                        LIVE AI ANALYSIS
+                    </div>
+
+                    <h2>
+                        Your product has a memory.
+                    </h2>
+
+                    <p>
+                        PulseLoop combines current customer
+                        feedback with historical Hindsight
+                        memories to identify recurring problems,
+                        solved problems and emerging opportunities.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="insight-cards">
+
+                <div class="panel insight-card">
+
+                    <span class="card-icon purple">
+                        ◈
+                    </span>
+
+                    <span class="panel-eyebrow">
+                        PROBLEM
+                    </span>
+
+                    <h3>
+                        What is going wrong?
+                    </h3>
+
+                    <p id="problemInsight">
+                        Generate an AI insight to identify
+                        recurring customer problems.
+                    </p>
+
+                </div>
+
+                <div class="panel insight-card">
+
+                    <span class="card-icon green">
+                        ✓
+                    </span>
+
+                    <span class="panel-eyebrow">
+                        PROGRESS
+                    </span>
+
+                    <h3>
+                        What improved?
+                    </h3>
+
+                    <p id="progressInsight">
+                        Historical memory will reveal which
+                        issues have improved over time.
+                    </p>
+
+                </div>
+
+                <div class="panel insight-card">
+
+                    <span class="card-icon orange">
+                        →
+                    </span>
+
+                    <span class="panel-eyebrow">
+                        NEXT STEP
+                    </span>
+
+                    <h3>
+                        What should we do?
+                    </h3>
+
+                    <p id="nextStepInsight">
+                        AI will recommend the highest-value
+                        next action.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="panel recommendation-panel">
+
+                <div class="panel-eyebrow">
+                    AI RECOMMENDATION
+                </div>
+
+                <h2>
+                    Product recommendation
+                </h2>
+
+                <p id="overviewRecommendation">
+                    Generate an insight to receive a
+                    recommendation based on your customer
+                    history.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- =================================================
+             AI CHAT
+        ================================================= -->
+
+        <section
+            id="page-chat"
+            class="page"
+        >
+
+            <div class="chat-page-heading">
+
+                <div>
+
+                    <div class="eyebrow">
+                        PULSELOOP AI
+                    </div>
+
+                    <h1>
+                        Ask anything.
+                        <span>Remember everything.</span>
+                    </h1>
+
+                    <p>
+                        Chat with an AI assistant that can
+                        reason over your customer feedback and
+                        Hindsight product memory.
+                    </p>
+
+                </div>
+
+                <div class="ai-status-pill">
+
+                    <span class="pulse-dot"></span>
+
+                    AI + Hindsight
+
+                </div>
+
+            </div>
+
+            <div class="chat-shell">
+
+                <div
+                    id="chatMessages"
+                    class="chat-messages"
+                ></div>
+
+                <div class="chat-input-area">
+
+                    <div class="chat-input-wrapper">
+
+                        <textarea
+                            id="chatInput"
+                            rows="1"
+                            placeholder="Ask PulseLoop about your customers..."
+                        ></textarea>
+
+                        <button
+                            id="sendChatButton"
+                            class="send-chat-button"
+                        >
+                            ↑
+                        </button>
+
+                    </div>
+
+                    <div class="chat-input-hint">
+
+                        <span>
+                            Enter to send
+                        </span>
+
+                        <span>
+                            •
+                        </span>
+
+                        <span>
+                            Powered by Hindsight + AI
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =================================================
+             ACTIVITY
+        ================================================= -->
+
+        <section
+            id="page-activity"
+            class="page"
+        >
+
+            <div class="page-heading">
+
+                <div>
+
+                    <div class="eyebrow">
+                        SYSTEM ACTIVITY
+                    </div>
+
+                    <h1>
+                        Activity
+                    </h1>
+
+                    <p>
+                        Recent PulseLoop intelligence activity.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="activity-list">
+
+                <div class="activity-item">
+
+                    <div class="activity-icon">
+                        ✦
+                    </div>
+
+                    <div>
+                        <strong>
+                            Hindsight memory connected
+                        </strong>
+
+                        <span>
+                            PulseLoop is ready to recall historical context.
+                        </span>
+                    </div>
+
+                    <time>
+                        Now
+                    </time>
+
+                </div>
+
+                <div class="activity-item">
+
+                    <div class="activity-icon">
+                        ◈
+                    </div>
+
+                    <div>
+                        <strong>
+                            Customer feedback analyzed
+                        </strong>
+
+                        <span>
+                            New customer signals are available.
+                        </span>
+                    </div>
+
+                    <time>
+                        Recently
+                    </time>
+
+                </div>
+
+                <div class="activity-item">
+
+                    <div class="activity-icon">
+                        ◉
+                    </div>
+
+                    <div>
+                        <strong>
+                            AI intelligence layer ready
+                        </strong>
+
+                        <span>
+                            Product insights can be generated.
+                        </span>
+                    </div>
+
+                    <time>
+                        Ready
+                    </time>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =================================================
+             SETTINGS
+        ================================================= -->
+
+        <section
+            id="page-settings"
+            class="page"
+        >
+
+            <div class="page-heading">
+
+                <div>
+
+                    <div class="eyebrow">
+                        CONFIGURATION
+                    </div>
+
+                    <h1>
+                        Settings
+                    </h1>
+
+                    <p>
+                        Configure your PulseLoop workspace.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="settings-grid">
+
+                <div class="panel setting-card">
+
+                    <span class="setting-icon">
+                        ✦
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Hindsight
+                        </h3>
+
+                        <p>
+                            Historical product memory connection.
+                        </p>
+
+                    </div>
+
+                    <span class="setting-status">
+                        Connected
+                    </span>
+
+                </div>
+
+                <div class="panel setting-card">
+
+                    <span class="setting-icon">
+                        ◉
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            AI Engine
+                        </h3>
+
+                        <p>
+                            Product intelligence reasoning layer.
+                        </p>
+
+                    </div>
+
+                    <span class="setting-status">
+                        Ready
+                    </span>
+
+                </div>
+
+                <div class="panel setting-card">
+
+                    <span class="setting-icon">
+                        ◈
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            API
+                        </h3>
+
+                        <p>
+                            FastAPI backend connection.
+                        </p>
+
+                    </div>
+
+                    <span class="setting-status">
+                        Connected
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</main>
+
+<!-- =====================================================
+     SEARCH OVERLAY
+===================================================== -->
+
+<div
+    id="searchOverlay"
+    class="overlay"
+>
+
+    <div class="search-modal">
+
+        <div class="search-modal-header">
+
+            <strong>
+                Search PulseLoop
+            </strong>
+
+            <button id="closeSearch">
+                ×
+            </button>
+
+        </div>
+
+        <div class="global-search-input">
+
+            <span>⌕</span>
+
+            <input
+                id="globalSearchInput"
+                type="text"
+                placeholder="Search feedback, topics..."
+            >
+
+        </div>
+
+        <div
+            id="globalSearchResults"
+            class="global-search-results"
+        >
+            <p>
+                Start typing to search the workspace.
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- =====================================================
+     FEEDBACK MODAL
+===================================================== -->
+
+<div
+    id="analyzeModal"
+    class="modal"
+>
+
+    <div class="modal-card">
+
+        <div class="modal-header">
+
+            <div>
+
+                <div class="panel-eyebrow">
+                    CUSTOMER SIGNAL
+                </div>
+
+                <h2>
+                    Add feedback
+                </h2>
+
+            </div>
+
+            <button
+                data-close-modal
+                class="modal-close"
+            >
+                ×
+            </button>
+
+        </div>
+
+        <p class="modal-description">
+            Add a customer signal and let PulseLoop
+            analyze and remember it.
+        </p>
+
+        <div class="source-options">
+
+            <button
+                class="source-option active"
+            >
+                Customer feedback
+            </button>
+
+            <button class="source-option">
+                Support ticket
+            </button>
+
+            <button class="source-option">
+                Survey
+            </button>
+
+        </div>
+
+        <textarea
+            id="feedbackInput"
+            rows="6"
+            placeholder="What did the customer say?"
+        ></textarea>
+
+        <button
+            id="submitFeedback"
+            class="primary-button full-button"
+        >
+            ✦ Analyze & remember
+        </button>
+
+    </div>
+
+</div>
+
+<!-- =====================================================
+     NOTIFICATIONS
+===================================================== -->
+
+<div
+    id="notificationPanel"
+    class="notification-panel"
+>
+
+    <div class="notification-header">
+
+        <strong>
+            Notifications
+        </strong>
+
+        <button id="closeNotifications">
+            ×
+        </button>
+
+    </div>
+
+    <div class="notification-item">
+
+        <div class="notification-icon">
+            ✦
+        </div>
+
+        <div>
+
+            <strong>
+                Hindsight connected
+            </strong>
+
+            <span>
+                Your product memory is online.
+            </span>
+
+        </div>
+
+    </div>
+
+    <div class="notification-item">
+
+        <div class="notification-icon">
+            ◈
+        </div>
+
+        <div>
+
+            <strong>
+                Customer signals ready
+            </strong>
+
+            <span>
+                PulseLoop can analyze your feedback.
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- =====================================================
+     TOAST
+===================================================== -->
+
+<div
+    id="toast"
+    class="toast"
+>
+
+    <div class="toast-icon">
+        ✦
+    </div>
+
+    <div>
+
+        <strong id="toastTitle">
+            PulseLoop
+        </strong>
+
+        <p id="toastMessage">
+            Ready.
+        </p>
+
+    </div>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
