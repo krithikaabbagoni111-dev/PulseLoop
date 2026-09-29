@@ -1,9 +1,9 @@
 # 🧠 PulseLoop
 
-### Turning Customer Feedback into Product Intelligence — with Persistent Memory.
+### Turning Customer Feedback into Product Intelligence — with Hindsight Memory.
 
 <p align="center">
-  <strong>🧠 Hindsight Memory • 💬 Memory-Aware AI • 📊 Feedback Intelligence • 🚀 Actionable Insights</strong>
+  <strong>🧠 Persistent Memory • 💬 Memory-Aware AI • 📊 Feedback Intelligence • 🚀 Actionable Insights</strong>
 </p>
 
 ---
