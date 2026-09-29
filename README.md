@@ -15,7 +15,7 @@
 | 🌐 **Live Website** | https://pulseloop-frontend.onrender.com/ |
 | ⚙️ **Backend API** | https://pulseloop-backend.onrender.com/ |
 | 📚 **Swagger API Docs** | https://pulseloop-backend.onrender.com/docs |
-| 🎥 **Demo Video** |  |
+| 🎥 **Demo Video** | https://youtu.be/iq67Dv8aqZ4 |
 
 ---
 
